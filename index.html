@@ -15,6 +15,35 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+        <style>
+
+            .dev-icons .list-inline-item{
+                border: 1px solid white;
+                justify-content: space-evenly;
+                color: wheat;
+                font-size: 1em;
+                background-color: #495057;
+                border-radius: 18px;
+                width: 120px;
+                height: fit-content;
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 1em;
+            }
+            .dev-icons .list-inline-item:hover{
+               background-color: #bd5d38;
+               cursor: pointer;
+            }
+
+            .skill-label{
+                font-size: 11px;
+                display: flex;
+                flex-direction: column;
+                margin-top: -10px;
+                font-weight: 100;
+            }
+        </style>
     </head>
     <body id="page-top" oncontextmenu="return false;">
         <!-- Navigation-->
@@ -197,17 +226,6 @@
                             <div class="flex-shrink-0"><span class="text-primary">Will be Available Soon</span></div>
                         </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">CSU Online Queueing System</h3>
-                            <div class="subheading mb-3">
-                                <a href="https://csu.edu.ph/ticketing/" >Queueing System</a>
-                            </div>
-                            <p>
-                                Online  Queueing system is being utilized by the registrar’s, accounting’s, cashier’s office and clients  to avoid long queues and in order to follow health protocols.
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </section>
              <!-- Skills-->
@@ -217,20 +235,20 @@
                     <h2 class="mb-5">Skills</h2>
                     <div class="subheading mb-3">Programming Languages & Tools</div>
                     <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-php"></i></li>
-                        <li class="list-inline-item"><i class="bi bi-server"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-php"></i> <span class="skill-label">PHP</span></li>
+                        <li class="list-inline-item"><i class="bi bi-server"></i> <span class="skill-label">Database</span></li>
+                        <li class="list-inline-item"><i class="fab fa-html5"></i> <span class="skill-label">HTML</span></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i> <span class="skill-label">CSS3</span></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i> <span class="skill-label">JavaScript</span></li>
                         <!-- <li class="list-inline-item"><i class="fab fa-angular"></i></li> -->
-                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-node"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i> <span class="skill-label">React JS</span></li>
+                        <li class="list-inline-item"><i class="fab fa-node"></i> <span class="skill-label">Node JS</span></li>
                         <!-- <li class="list-inline-item"><i class="fab fa-sass"></i></li> -->
                         <!-- <li class="list-inline-item"><i class="fab fa-less"></i></li> -->
-                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-wordpress"></i> <span class="skill-label">WordPress</span></li>
                       <!--   <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
                         <li class="list-inline-item"><i class="fab fa-grunt"></i></li> -->
-                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-npm"></i> <span class="skill-label">NPM</span></li>
                     </ul>
                     <div class="subheading mb-3">Workflow</div>
                     <ul class="fa-ul mb-0">
