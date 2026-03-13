@@ -9,8 +9,8 @@
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-:root {
+/* Remove Bootstrap-specific styles. Use Tailwind/DaisyUI for styling. */
+/* Add custom styles here if needed. */
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;

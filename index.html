@@ -1,439 +1,427 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>JEFREY SAPLA QUINIANO</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
-        <style>
-            .dev-icons .list-inline-item{
-                border: 1px solid white;
-                justify-content: space-evenly;
-                color: wheat;
-                font-size: 1em;
-                background-color: #495057;
-                border-radius: 18px;
-                width: 120px;
-                height: fit-content;
-                text-align: center;
-                margin-bottom: 10px;
-                font-size: 1em;
-            }
-            .dev-icons .list-inline-item:hover{
-               background-color: #bd5d38;
-               cursor: pointer;
-            }
-
-            .skill-label{
-                font-size: 11px;
-                display: flex;
-                flex-direction: column;
-                margin-top: -10px;
-                font-weight: 100;
-            }
-            ul li{
-                font-weight: 900;
-                font-size: x-large;
-                gap: 2;
-                
-            }
-
-            ul li:hover{
-                color: #bd5d38;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body id="page-top" oncontextmenu="return false;">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Jefrey Quiniano</span>
-                <span class="d-none d-lg-block"><img class=" img-profile rounded-circle" height="200px" width="200px" src="./assets/img/profile.jpg" alt="Jefrey S. Quiniano" /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#project">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Jefrey S.
-                        <span class="text-primary">Quiniano</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        Baclig Street · Flourishing, Gonzaga, Cagayan Valley · (+63) 9278598299
-                        <a href="mailto:saplajeff16@gmail.com">saplajeff16@gmail.com</a>
+<html lang="en" class="scroll-smooth" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jefrey Quiniano</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <style>
+        .cart-item-animate { animation: slideIn 0.3s ease-out; }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+        
+        /* Smooth fade for scroll button */
+        #scroll-to-top { transition: opacity 0.3s, transform 0.3s; }
+        #scroll-to-top.hidden-btn { opacity: 0; pointer-events: none; transform: translateY(20px); }
+    </style>
+</head>
+<body class="bg-base-200 min-h-screen">
+    <div class="drawer drawer-end">
+        <input id="cart-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col">
+            <nav class="navbar bg-base-100 sticky top-0 z-50 shadow-sm px-4 md:px-8">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium">
+                            <li>
+                                <a href="#home">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg> Home
+                                </a>
+                            </li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#interests">Interests</a></li>
+                            <li><a href="#awards">Awards</a></li>
+                        </ul>
                     </div>
-                    <p class="lead mb-5">I am experienced in web development to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="mailto:saplajeff16@gmail.com">@</a>
-                        <a class="social-icon" href="https://www.facebook.com/jefrey.quiniano.7" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="https://www.linkedin.com/in/jefrey-quiniano-3b464816b" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#home" class="btn btn-ghost text-xl font-bold italic text-primary tracking-tighter" style="padding: 0;">
+                        <img src="assets/img/favicon.png" alt="Tangkiran e-mart Logo" style="height: 48px; width: auto; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.10);" />
+                    </a>
+                </div>
+
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 font-medium">
+                        <li>
+                            <a href="#home">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg> Home
+                            </a>
+                        </li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#interests">Interests</a></li>
+                        <li><a href="#awards">Awards</a></li>
+                    </ul>
+                </div>
+
+                <div class="navbar-end gap-2">
+                    <label class="swap swap-rotate btn btn-ghost btn-circle">
+                        <input type="checkbox" class="theme-controller" value="light" onclick="ToggleTheme()"/>
+                        <svg class="swap-off fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+                        <svg class="swap-on fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.69Z"/></svg>
+                    </label>
+
+                    <a class="btn btn-primary btn-sm hidden sm:flex btn-outline" href="#about">About Me</a>
+                </div>
+            </nav>
+
+            <section id="home" class="hero min-h-[70vh] bg-base-100">
+                <div class="hero-content flex-col lg:flex-row-reverse gap-10">
+                    <img src="/assets/img/profile.jpg" class="max-w-sm rounded-3xl shadow-2xl" alt="Featured" />
+                    <div>
+                        <h1 class="text-5xl font-bold leading-tight">Jefrey Quiniano <br/><span class="text-primary">Elevating Ideas Through Code & Design</span></h1>
+                        <p class="py-6 text-lg opacity-80">Welcome! I’m a Project Manager and Developer dedicated to turning complex problems into high-performance digital experiences. From sleek, responsive front-ends to optimized back-end logic, I build software that scales.</p>
+                        <a href="#skills" class="btn btn-primary btn-lg">
+                            Explore My Skills
+                        </a>
                     </div>
                 </div>
             </section>
-            <hr class="m-0" />
-            <!-- Services-->
-            <section class="resume-section" id="services">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Services Offered</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-2">
-                        <div class="flex-grow-3">
-                            <ul>
-                                <li>Web Application Development</li>
-                                <li>Server Setup</li>
-                                <li>Laptop or Computer Repair</li>
-                                <ul>
-                                    <li>Reformat</li>
-                                    <li>Software Installation:</li>
-                                    <ul>
-                                        <li>MS Office</li>
-                                        <li>Browsers</li>
-                                        <li>Others</li>
-                                    </ul>
-                                    <li>Hardware Upgrade and Installation such as:</li>
-                                    <ul>
-                                        <li>Random Access Memory (RAM)</li>
-                                        <li>Hard Disk Drive (HDD)</li>
-                                        <li>
-                                            Hard Disk Drive to Solid State Drive (HDD - SSD) - <a href="https://www.pcmag.com/news/ssd-vs-hdd-whats-the-difference" target="_blank" rel="noopener noreferrer"><small>Learn More about SSD</small></a>
-                                        </li>
-                                    </ul>
-                                </ul>
-                                <li>Printer & Computer Servicing and Cleaning</li>
-                                <li>Other Services aligned in ICT</li>
+            <!-- About Section -->
+            <section id="about" class="py-20 bg-base-100">
+                <div class="max-w-5xl mx-auto px-4 md:px-8">
+                    <div class="card bg-base-200 shadow-xl p-8 ">
+                        <h2 class="text-4xl font-bold mb-6">About Me</h2>
+                        <p class="text-lg opacity-80 mb-4">Welcome to my portfolio! I'm Jefrey Quiniano, a passionate web developer and designer dedicated to crafting modern, responsive web applications and user-friendly interfaces.</p>
+                        <p class="text-lg opacity-80 mb-4">With expertise in full-stack development, I focus on delivering quality solutions that combine functionality with elegant design. I'm constantly exploring the latest technologies and best practices in web development.</p>
+                        <div class="mt-6 flex gap-4">
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary mb-2">Frontend</h3>
+                                <p class="opacity-70">HTML, CSS, JavaScript, React, Tailwind</p>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary mb-2">Backend</h3>
+                                <p class="opacity-70">C#, PHP, Node.js, MySQL, Database Design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="py-20 bg-gradient-to-br from-base-100 to-base-200">
+                <div class="max-w-5xl mx-auto px-4 md:px-8">
+                    <h2 class="text-4xl font-bold mb-12 text-center">Services Offered</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card bg-base-100 shadow-md p-6 hover:shadow-xl transition">
+                            <h3 class="font-bold text-xl mb-3 text-primary">Web Application Development</h3>
+                            <p class="opacity-70">Building responsive web applications with modern frameworks and clean code.</p>
+                        </div>
+                        <div class="card bg-base-100 shadow-md p-6 hover:shadow-xl transition">
+                            <h3 class="font-bold text-xl mb-3 text-primary">UI/UX Design</h3>
+                            <p class="opacity-70">Designing user-friendly interfaces with excellent user experience.</p>
+                        </div>
+                        <div class="card bg-base-100 shadow-md p-6 hover:shadow-xl transition">
+                            <h3 class="font-bold text-xl mb-3 text-primary">Server Setup & Maintenance</h3>
+                            <p class="opacity-70">Configuring and maintaining robust server infrastructure.</p>
+                        </div>
+                        <div class="card bg-base-100 shadow-md p-6 hover:shadow-xl transition">
+                            <h3 class="font-bold text-xl mb-3 text-primary">Database Design</h3>
+                            <p class="opacity-70">Creating efficient and scalable database solutions.</p>
+                        </div>
+                        <div class="card bg-base-100 shadow-md p-6 hover:shadow-xl transition">
+                            <h3 class="font-bold text-xl mb-3 text-primary">Consulting</h3>
+                            <p class="opacity-70">Providing expert advice for your projects and technologies.</p>
+                        </div>
+                        <div class="card bg-base-100 shadow-md p-6 hover:shadow-xl transition">
+                            <h3 class="font-bold text-xl mb-3 text-primary">Technical Support</h3>
+                            <p class="opacity-70">Offering ongoing support and maintenance services.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="py-20 bg-base-100">
+                <div class="max-w-5xl mx-auto px-4 md:px-8">
+                    <h2 class="text-4xl font-bold mb-12 text-center">Work Experience</h2>
+                    <div class="space-y-6">
+                        <div class="card bg-base-200 p-6 border-l-4 border-primary">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-bold text-xl">Senior Research and Development Developer</h3>
+                                    <p class="text-primary font-semibold">YML Group Outsourcing - BPO</p>
+                                </div>
+                                <span class="badge badge-primary">March 2025 - Present</span>
+                            </div>
+                            <p class="opacity-70 mt-3">Building custom web solutions for various clients and startups.</p>
+                        </div>
+                        <div class="card bg-base-200 p-6 border-l-4 border-primary">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-bold text-xl">Web Developer</h3>
+                                    <p class="text-primary font-semibold">Cagayan State University - Andrews</p>
+                                </div>
+                                <span class="badge badge-primary">Sep 2023 - March 2025</span>
+                            </div>
+                            <p class="opacity-70 mt-3">Developing and maintaining web applications for university systems and portals.</p>
+                        </div>
+                        <div class="card bg-base-200 p-6 border-l-4 border-primary">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-bold text-xl">Network Administrator</h3>
+                                    <p class="text-primary font-semibold">Cagayan State University - Gonzaga</p>
+                                </div>
+                                <span class="badge badge-primary">Jan 2023 - Aug 2023</span>
+                            </div>
+                            <p class="opacity-70 mt-3">Managing networks and infrastructure for university operations.</p>
+                        </div>
+                        <div class="card bg-base-200 p-6 border-l-4 border-primary">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-bold text-xl">Web Developer</h3>
+                                    <p class="text-primary font-semibold">Cagayan State University - Andrews</p>
+                                </div>
+                                <span class="badge badge-primary">Feb 2020 - Dec 2022</span>
+                            </div>
+                            <p class="opacity-70 mt-3">Developed multiple web applications for learning management systems.</p>
+                        </div>
+                        <div class="card bg-base-200 p-6 border-l-4 border-primary">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-bold text-xl">Freelancer</h3>
+                                    <p class="text-primary font-semibold">Subject for Availability</p>
+                                </div>
+                                <span class="badge badge-primary">2018 - Present</span>
+                            </div>
+                            <p class="opacity-70 mt-3">Building custom web solutions for various clients and startups.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="py-20 bg-gradient-to-br from-base-100 to-base-200">
+                <div class="max-w-5xl mx-auto px-4 md:px-8">
+                    <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="card bg-base-100 shadow-lg overflow-hidden hover:shadow-2xl transition">
+                            <div class="card-body">
+                                <h3 class="card-title text-xl">Queueing System</h3>
+                                <p class="opacity-70">A system for managing queues in university offices, improving efficiency and maintaining health protocols.</p>
+                                <div class="card-actions justify-end mt-4">
+                                    <a href="https://csu.edu.ph/ticketing/" target="_blank" class="btn btn-primary btn-sm">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-base-100 shadow-lg overflow-hidden hover:shadow-2xl transition">
+                            <div class="card-body">
+                                <h3 class="card-title text-xl">Learning Environment Network System</h3>
+                                <p class="opacity-70">A multi-campus LMS for planning, implementing, and assessing learning processes across 7 campuses.</p>
+                                <div class="card-actions justify-end mt-4">
+                                    <a href="https://lensandrews.csu.edu.ph" target="_blank" class="btn btn-primary btn-sm">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-base-100 shadow-lg overflow-hidden hover:shadow-2xl transition">
+                            <div class="card-body">
+                                <h3 class="card-title text-xl">Document Archive & Access System</h3>
+                                <p class="opacity-70">Secure document repository and online file sharing platform for universities.</p>
+                                <div class="card-actions justify-end mt-4">
+                                    <a href="https://daas.csu.edu.ph" target="_blank" class="btn btn-primary btn-sm">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-base-100 shadow-lg overflow-hidden hover:shadow-2xl transition">
+                            <div class="card-body">
+                                <h3 class="card-title text-xl">CSU Helpdesk System</h3>
+                                <p class="opacity-70">Technical support tracking and issue management system for university offices.</p>
+                                <div class="card-actions justify-end mt-4">
+                                    <a href="https://csu.edu.ph/helpdesk" target="_blank" class="btn btn-primary btn-sm">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="py-20 bg-base-100">
+                <div class="max-w-5xl mx-auto px-4 md:px-8">
+                    <h2 class="text-4xl font-bold mb-12 text-center">Skills & Expertise</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">Programming Languages & Tools</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="badge badge-primary badge-lg">C# MVC</span>
+                                <span class="badge badge-primary badge-lg">PHP Vanilla, Laravel, CodeIgniter</span>
+                                <span class="badge badge-primary badge-lg">JavaScript</span>
+                                <span class="badge badge-primary badge-lg">HTML/CSS</span>
+                                <span class="badge badge-primary badge-lg">React</span>
+                                <span class="badge badge-primary badge-lg">Node.js</span>
+                                <span class="badge badge-primary badge-lg">MySQL</span>
+                                <span class="badge badge-primary badge-lg">Tailwind CSS</span>
+                                <span class="badge badge-primary badge-lg">GitHub</span>
+                                <span class="badge badge-primary badge-lg">DevOps</span>
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">Workflow & Methods</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-3"><span class="badge badge-success">✓</span> <span>Mobile-First, Responsive Design</span></li>
+                                <li class="flex items-center gap-3"><span class="badge badge-success">✓</span> <span>Cross Browser Testing & Debugging</span></li>
+                                <li class="flex items-center gap-3"><span class="badge badge-success">✓</span> <span>Full-Stack Development</span></li>
+                                <li class="flex items-center gap-3"><span class="badge badge-success">✓</span> <span>Agile & Scrum Methodologies</span></li>
+                                <li class="flex items-center gap-3"><span class="badge badge-success">✓</span> <span>API Development & Integration</span></li>
+                                <li class="flex items-center gap-3"><span class="badge badge-success">✓</span> <span>Database Design & Optimization</span></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Work Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Developer</h3>
-                            <div class="subheading mb-3">Cagayan State University - Andrews</div>
-                            <p></p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2023 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Network Administrator</h3>
-                            <div class="subheading mb-3">Cagayan State University - Gonzaga</div>
-                            <p></p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">January 2023 - August 2023</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Developer</h3>
-                            <div class="subheading mb-3">Cagayan State University - Andrews</div>
-                            <p></p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">February 2020 - December 2022</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Freelancer</h3>
-                            <!-- <div class="subheading mb-3">On Call</div> -->
-                            <!-- <div class="subheading mb-3">Shout! Media Productions</div> -->
-                            <!-- <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p> -->
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Since 2018 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Computer Technician</h3>
-                            <!-- <div class="subheading mb-3">On Call</div> -->
-                            <!-- <p></p> -->
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Since 2018 - Present</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <section class="resume-section" id="project">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Projects</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Queueing System</h3>
-                            <div class="subheading mb-3">
-                                <a href="https://csu.edu.ph/ticketing/" target="_blank">CSU Queueing</a>
-                            </div>
-                            <p>
-                                This system is utilized by the front offices of the CSU Andrews: 
-                                <ul>
-                                    <li>REGISTRAR OFFICE</li>
-                                    <li>ACCOUNTING OFFICE</li>
-                                    <li>CASHIER OFFICE</li>
-                                </ul>
-                                to avoid many students stuck in the hallway, also to maintain health protocols.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Learning Environment Network System</h3>
-                            <div class="subheading mb-3">
-                                <a href="https://lensandrews.csu.edu.ph" target="_blank">LENS Andrews</a> <br />
-                                <a href="https://lens.csuaparri.net" target="_blank">LENS Aparri</a> <br />
-                                <a href="https://lens.csugonzaga.net" target="_blank">LENS Gonzaga</a> <br />
-                                <a href="https://lens.csulallo.net" target="_blank">LENS Lal-lo</a> <br />
-                                <a href="https://lens.csulasam.net" target="_blank">LENS Lasam</a> <br />
-                                <a href="https://lens.csupiat.net" target="_blank">LENS Piat</a> <br />
-                                <a href="https://lens.csusm.edu.ph" target="_blank">LENS Sanchez Mira</a>
-                            </div>
-                            <p>
-                                A learning management system (LMS) is a software application or web-based technology used to plan, implement and assess a specific learning process. It is used for eLearning practices and, in its most common form, consists of two elements: a server that performs the base functionality and a user interface that is operated by instructors, students and administrators.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Document Archive & Access System - D2AS</h3>
-                            <div class="subheading mb-3">
-                                <a href="https://daas.csu.edu.ph" target="_blank">d2as</a>
-                            </div>
-                            <p>
-                                This system is intended for the Cagayan State University and its Co-Agencies to provide a secure documents repository (archive) and faster online file sharing. 
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">College Admission Online Registration</h3>
-                            <div class="subheading mb-3">
-                                <a href="https://csu.edu.ph/registration" target="_blank">CAT Online Registration</a>
-                            </div>
-                            <p>
-                                This system is intended for the upcoming freshmens of Cagayan State University who wanted to enroll in this University. In order for the students to take the exam, he/she will register first in this system. The admin of the per college must review the student's registration first before accepting the students.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">CSU Helpdesk</h3>
-                            <div class="subheading mb-3">
-                                <a href="https://csu.edu.ph/helpdesk" target="_blank">CSU Helpdesk</a>
-                            </div>
-                            <p>
-                                This system is utilize by the Management Information System Office to monitor their accomplishment reports. It is also use by other office of Cagayan State University to help them keep track of their technical and non-technical concerns.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Voting System</h3>
-                            <div class="subheading mb-3">
-                                <a href="https://csu.edu.ph/ivote2/" target="_blank">Faculty</a> <br />
-                                <a href="https://csu.edu.ph/ivote/" target="_blank">Student</a>
-                            </div>
-                            <p>
-                                This system is use by the students and faculty during election. It provides an accurate, fast and transparent election results.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Human Resource Information System</h3>
-                            <div class="subheading mb-3">
-                                <a href="https://csu.edu.ph/hris" >HRIS</a>
-                            </div>
-                            <p>
-                                This system will generate the list of employee, educational background, trainings, seminars, researches, view employee loans and service records.
-                            </p>
-                            <div class="flex-shrink-0"><span class="text-primary">Temporary Link</span></div>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">CSUL Alumni Tracking System</h3>
-                            <div class="subheading mb-3">
-                                <a href="#" >CSULATS</a>
-                            </div>
-                            <p>
-                                This system will track the alumnus of this campus by registering into the system and filling up the required informations. The system will generate number of alumnus by their fields of specialization. This will also track the number of alumnus that has job or jobless.
-                            </p>
-                            <div class="flex-shrink-0"><span class="text-primary">Will be Available Soon</span></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-             <!-- Skills-->
-            <hr class="m-0" />
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-php"></i> <span class="skill-label">PHP</span></li>
-                        <li class="list-inline-item"><i class="bi bi-server"></i> <span class="skill-label">Database</span></li>
-                        <li class="list-inline-item"><i class="fab fa-html5"></i> <span class="skill-label">HTML</span></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i> <span class="skill-label">CSS3</span></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i> <span class="skill-label">JavaScript</span></li>
-                        <!-- <li class="list-inline-item"><i class="fab fa-angular"></i></li> -->
-                        <li class="list-inline-item"><i class="fab fa-react"></i> <span class="skill-label">React JS</span></li>
-                        <li class="list-inline-item"><i class="fab fa-node"></i> <span class="skill-label">Node JS</span></li>
-                        <!-- <li class="list-inline-item"><i class="fab fa-sass"></i></li> -->
-                        <!-- <li class="list-inline-item"><i class="fab fa-less"></i></li> -->
-                        <li class="list-inline-item"><i class="fab fa-wordpress"></i> <span class="skill-label">WordPress</span></li>
-                      <!--   <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li> -->
-                        <li class="list-inline-item"><i class="fab fa-npm"></i> <span class="skill-label">NPM</span></li>
-                    </ul>
-                    <div class="subheading mb-3">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Back-end Development from scratch
-                        </li>
-                    </ul>
-                </div>
-            </section>
-     
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Cagayan State University - Gonzaga</h3>
-                            <div class="subheading mb-3"><i>Bachelor of Science in Information Technology</i> <br />Tertiary Education</div>
-                            <!--<div class="subheading"></div>-->
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2014 - June 2018</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Lal-lo National High School</h3>
-                            <div class="subheading mb-3">Secondary</div>
-                            <!-- <p>GPA: 3.56</p> -->
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2008 - June 2012</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Sta. Maria Central School</h3>
-                            <div class="subheading mb-3">Elementary</div>
-                            <!-- <p>GPA: 3.56</p> -->
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2002 - June 2008</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-           
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                    <p>Apart from being a web developer, I enjoy most of my time being with my friends. Playing mobile games. During the warmer months, I enjoy going to beach.</p>
-                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows and I spend a large amount of my free time exploring the latest technology advancements in the front-end especially in the back-end web development world.</p>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Awards-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Awards & Certifications</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            DICT - Web Development Training Certificate (PHP, MYSQL, JAVASCRIPT/JQUERY/AJAX, BOOTSTRAP)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Best Programmer of the Year - 2018
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            2
-                            <sup>nd</sup>
-                            Runner - Up in Dynamic Web Designing (PHP/MySQL)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            2
-                            <sup>nd</sup>
-                            Runner - Up in General Programming (C#)
-                        </li>
-                        
-                    </ul>
-                </div>
-            </section>
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
 
-        <script type="text/javascript">
-          document.onkeydown = function(e) {
-            if(event.keyCode == 123) {
-               return false;
-            }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-               return false;
-            }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-               return false;
-            }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-               return false;
-            }
-            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-               return false;
-            }
-             if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
-               return false;
-            }
-          }
-        </script>
-    </body>
+            <!-- Education Section -->
+            <section id="education" class="py-20 bg-gradient-to-br from-base-100 to-base-200">
+                <div class="max-w-5xl mx-auto px-4 md:px-8">
+                    <h2 class="text-4xl font-bold mb-12 text-center">Education</h2>
+                    <div class="space-y-6">
+                        <div class="card bg-base-100 p-6 border-t-4 border-primary">
+                            <h3 class="font-bold text-xl">Bachelor of Science in Information Technology</h3>
+                            <p class="text-primary font-semibold">Cagayan State University - Gonzaga</p>
+                            <span class="badge badge-outline mt-3">June 2014 - June 2018</span>
+                            <p class="opacity-70 mt-3">Tertiary Education</p>
+                        </div>
+                        <div class="card bg-base-100 p-6 border-t-4 border-primary">
+                            <h3 class="font-bold text-xl">Secondary Education</h3>
+                            <p class="text-primary font-semibold">Lal-lo National High School</p>
+                            <span class="badge badge-outline mt-3">June 2008 - June 2012</span>
+                        </div>
+                        <div class="card bg-base-100 p-6 border-t-4 border-primary">
+                            <h3 class="font-bold text-xl">Elementary Education</h3>
+                            <p class="text-primary font-semibold">Sta. Maria Central School</p>
+                            <span class="badge badge-outline mt-3">June 2002 - June 2008</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interests Section -->
+            <section id="interests" class="py-20 bg-base-100">
+                <div class="max-w-5xl mx-auto px-4 md:px-8">
+                    <h2 class="text-4xl font-bold mb-12 text-center">Interests</h2>
+                    <div class="card bg-base-200 p-8 shadow-lg">
+                        <p class="text-lg opacity-80 mb-4">Apart from being a programmer, I enjoy my time with friends and family. I'm an avid mobile gamer, and during warmer months, I love exploring beautiful beaches and natural landscapes.</p>
+                        <p class="text-lg opacity-80 mb-6">When indoors, I'm fascinated by sci-fi and fantasy genres in movies and TV shows. I spend considerable time exploring the latest technology advancements, particularly in front-end and back-end web development.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="badge badge-soft badge-primary">Photography</span>
+                            <span class="badge badge-soft badge-secondary">Travel</span>
+                            <span class="badge badge-soft badge-accent">Gaming</span>
+                            <span class="badge badge-soft badge-info">Movies & TV</span>
+                            <span class="badge badge-soft badge-success">Technology</span>
+                            <span class="badge badge-soft badge-warning">Outdoor Activities</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Awards Section -->
+            <section id="awards" class="py-20 bg-gradient-to-br from-base-100 to-base-200">
+                <div class="max-w-5xl mx-auto px-4 md:px-8">
+                    <h2 class="text-4xl font-bold mb-12 text-center">Awards & Certifications</h2>
+                    <div class="space-y-4">
+                        <div class="card bg-base-100 p-6 shadow-md hover:shadow-lg transition border-l-4 border-warning">
+                            <h3 class="font-bold text-lg">DICT - Web Development Training Certificate</h3>
+                            <p class="opacity-70 text-sm">PHP, MySQL, JavaScript/jQuery/Ajax, Bootstrap</p>
+                        </div>
+                        <div class="card bg-base-100 p-6 shadow-md hover:shadow-lg transition border-l-4 border-warning">
+                            <h3 class="font-bold text-lg">Best Programmer of the Year</h3>
+                            <p class="opacity-70 text-sm">2018</p>
+                        </div>
+                        <div class="card bg-base-100 p-6 shadow-md hover:shadow-lg transition border-l-4 border-warning">
+                            <h3 class="font-bold text-lg">2nd Runner - Up in Dynamic Web Designing</h3>
+                            <p class="opacity-70 text-sm">PHP/MySQL Competition</p>
+                        </div>
+                        <div class="card bg-base-100 p-6 shadow-md hover:shadow-lg transition border-l-4 border-warning">
+                            <h3 class="font-bold text-lg">2nd Runner - Up in General Programming</h3>
+                            <p class="opacity-70 text-sm">C# Competition</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <main id="shop" class="flex flex-col lg:flex-row gap-8 p-4 md:p-12 max-w-7xl mx-auto w-full">
+                <section class="flex-1 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" id="product-grid">
+                </section>
+            </main>
+
+            <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+                <nav>
+                    <h6 class="footer-title">Company</h6> 
+                    <a class="link link-hover">About us</a>
+                    <a class="link link-hover">Contact</a>
+                </nav> 
+                <nav>
+                    <h6 class="footer-title">Legal</h6> 
+                    <a class="link link-hover">Terms of use</a>
+                    <a class="link link-hover">Privacy policy</a>
+                </nav>
+                <form>
+                    <h6 class="footer-title">Newsletter</h6> 
+                    <div class="join">
+                        <input type="email" placeholder="username@site.com" class="input input-bordered join-item" /> 
+                        <button class="btn btn-primary join-item">Subscribe</button>
+                    </div>
+                </form>
+            </footer>
+        </div>
+    </div>
+
+    <button 
+        id="scroll-to-top" 
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+        class="btn btn-primary btn-circle fixed bottom-6 right-6 z-[60] shadow-lg hidden-btn"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+</body>
 </html>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.jquery.com/jquery-4.0.0.slim.min.js" integrity="sha256-8DGpv13HIm+5iDNWw1XqxgFB4mj+yOKFNb+tHBZOowc=" crossorigin="anonymous"></script>
+<script src="./js/theme.js"></script>
+<script>
+    window.onscroll = function() {
+        const btn = document.getElementById('scroll-to-top');
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.classList.remove('hidden-btn');
+        } else {
+            btn.classList.add('hidden-btn');
+        }
+    };
+</script>
