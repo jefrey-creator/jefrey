@@ -2,7 +2,6 @@ function ToggleTheme() {
     // 1. Get current theme from the HTML attribute (more reliable than the toggle value)
     var currentTheme = $('html').attr('data-theme');
 
-    console.log(currentTheme)
     var newTheme;
 
     // 2. Toggle the logic
@@ -31,7 +30,6 @@ function currentTheme(){
     // 3. Sync your toggle/input (e.g., if it's a checkbox or select)
     $('.theme-controller').val(savedTheme);
 
-    console.log("Current theme set to:", savedTheme);
 }
 
 $(document).ready(function(){

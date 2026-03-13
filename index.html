@@ -8,9 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     
     <style>
-        .cart-item-animate { animation: slideIn 0.3s ease-out; }
-        @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
-        
         /* Smooth fade for scroll button */
         #scroll-to-top { transition: opacity 0.3s, transform 0.3s; }
         #scroll-to-top.hidden-btn { opacity: 0; pointer-events: none; transform: translateY(20px); }
@@ -45,13 +42,13 @@
                                 </svg> Home
                                 </a>
                             </li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#experience">Experience</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#education">Education</a></li>
-                            <li><a href="#interests">Interests</a></li>
-                            <li><a href="#awards">Awards</a></li>
+                            <li><a href="#services"  class="nav-link">Services</a></li>
+                            <li><a href="#experience"  class="nav-link">Experience</a></li>
+                            <li><a href="#projects" class="nav-link">Projects</a></li>
+                            <li><a href="#skills" class="nav-link">Skills</a></li>
+                            <li><a href="#education" class="nav-link">Education</a></li>
+                            <li><a href="#interests" class="nav-link">Interests</a></li>
+                            <li><a href="#awards" class="nav-link">Awards</a></li>
                         </ul>
                     </div>
                     <a href="#home" class="btn btn-ghost text-xl font-bold italic text-primary tracking-tighter" style="padding: 0;">
@@ -62,7 +59,7 @@
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 font-medium">
                         <li>
-                            <a href="#home">
+                            <a href="#home" class="nav-link">
                                     <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     class="h-5 w-5"
@@ -77,13 +74,13 @@
                                 </svg> Home
                             </a>
                         </li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#interests">Interests</a></li>
-                        <li><a href="#awards">Awards</a></li>
+                        <li><a href="#services"  class="nav-link">Services</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#education" class="nav-link">Education</a></li>
+                        <li><a href="#interests" class="nav-link">Interests</a></li>
+                        <li><a href="#awards" class="nav-link">Awards</a></li>
                     </ul>
                 </div>
 
@@ -440,4 +437,23 @@
             btn.classList.add('hidden-btn');
         }
     };
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // 1. Remove active class from all nav links
+                navLinks.forEach(item => item.classList.remove('active'));
+
+                // 2. Add active class to the clicked link
+                this.classList.add('active');
+
+                // 3. Optional: Close mobile dropdown after clicking
+                if (document.activeElement instanceof HTMLElement) {
+                    document.activeElement.blur();
+                }
+            });
+        });
+    });
 </script>
